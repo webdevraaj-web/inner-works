@@ -4,7 +4,7 @@ import { fetchPageBySlug } from '@/lib/wordpress';
 import React, { useEffect, useState } from 'react'
 import Form from './form';
 import Phone from './phone';
-import Address from './address';
+// import Address from './address';
 
 function Contact() {
       const slug=SLUG[0]
@@ -44,7 +44,7 @@ function Contact() {
                 </div>
 
                 <div className="con_s_third">
-                    <Address result={result}/>
+                    {/* <Address result={result}/> */}
                 </div>
                 
             </div>
