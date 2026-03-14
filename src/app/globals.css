@@ -1600,7 +1600,151 @@ video {
 
 
 
+/*LOADER CSS*/
 
+.page_loader{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+overflow:hidden;
+background:#fff;
+}
+
+ 
+
+.loader_content{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:10px;
+z-index:2;
+}
+
+ 
+
+.loader_spinner{
+width:80px;
+height:80px;
+border:4px solid #e5e5e5;
+border-top:4px solid var(--black-color);
+border-radius:50%;
+animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+0%{transform:rotate(0deg);}
+100%{transform:rotate(360deg);}
+}
+
+ 
+
+.particles{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-image:radial-gradient(#000 1px, transparent 1px);
+background-size:20px 20px;
+opacity:0.15;
+animation:particleMove 6s linear infinite;
+}
+
+ 
+
+@keyframes particleMove{
+0%{
+transform:translateY(0px);
+}
+50%{
+transform:translateY(-30px);
+}
+100%{
+transform:translateY(0px);
+}
+}
+
+
+
+/*ERROR  LOADER*/
+
+.page_error{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+overflow:hidden;
+text-align:center;
+}
+.error_content h2 {
+    margin: 0px;
+    font-size: 80px;
+}
+
+.error_content p {
+    margin: 0px;
+    font-size: 20px;
+}
+
+button.refresh_btn {
+    width: 50%;
+    padding: 14px 18px;
+    border: unset;
+    border-radius: 4px;
+    background-color: var(--black-color);
+    color:#fff;
+    font-family: var(--primary-font);
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 25px;
+}
+ 
+
+.error_content{
+display:flex;
+flex-direction:column;
+gap:16px;
+z-index:2;
+align-items: center;
+}
+
+ 
+
+.error_particles{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+background-image:radial-gradient(red 1px, transparent 1px);
+background-size:20px 20px;
+
+opacity:0.15;
+
+animation:errorParticleMove 6s linear infinite;
+}
+
+ 
+
+@keyframes errorParticleMove{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-20px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
 
 
 
